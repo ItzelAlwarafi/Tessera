@@ -26,6 +26,6 @@ class Event(models.Model):
     vip_price=models.IntegerField(blank=True)
     image_url=models.URLField()
 
-    def __srt__(self):
+    def __str__(self):
         return self.name
     
