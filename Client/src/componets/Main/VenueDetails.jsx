@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
-
+import CreateEvents from './CreateEvents'
 export default function VenueDetails(){
 
     const { id } = useParams()
@@ -47,6 +47,7 @@ export default function VenueDetails(){
                             <h5>${event.ga_price}</h5>
                         </div>
                     ))}
+                    <CreateEvents/>
             </div>
 
         )

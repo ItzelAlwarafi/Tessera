@@ -1,6 +1,7 @@
-export default function CreateEvents(){
-    return(
+import { useRef } from "react"
 
-        <h1> Im CreateEvents</h1>
-    )
-}
+
+
+export default function CreateEvents(){
+
+    const venue=use

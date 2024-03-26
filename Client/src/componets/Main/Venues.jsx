@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
+
 export default function Venues(){
 
     const [venues, setVenues] = useState([])
@@ -35,6 +36,7 @@ export default function Venues(){
                         </div>
                     ))}
                 </div>
+                
             </div>
         )
     }
