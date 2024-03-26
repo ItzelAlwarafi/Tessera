@@ -34,7 +34,7 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
 
             
          
-            <div>
+            
              
             <div className='venue-details-wrapper'>
                 <div className='create-event-button'>
