@@ -31,10 +31,16 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
         return <h1>Loading...</h1>
     } else {
         return (
+
+            
+         
+            <div>
+             
             <div className='venue-details-wrapper'>
                 <div className='create-event-button'>
                     <button onClick={scrollToCreate} >Add event</button>
                 </div>
+
                 <img alt={venue.name} src={venue.image_url} />
                 <div className='venue-details'>
                     <div className='venue-row'>
@@ -75,12 +81,18 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
                             </div>
                         </div>
                     ))}
+
+                   
+              <CreateEvents/>
+
                 </div>
                 <div className='create-event-wrapper' id='create-event-form' >
                     <CreateEvents/>
                 </div>
-            </div>
 
+            </div>
+           
+             
         )
     }
 }
