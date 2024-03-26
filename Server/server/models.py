@@ -9,6 +9,7 @@ class Venue(models.Model):
     poc_name=models.CharField(max_length=100)
     poc_email=models.CharField(max_length=100)
     image_url=models.URLField()
+    seating_image=models.URLField(default='')
 
 
     def __str__(self):
