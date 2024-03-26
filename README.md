@@ -4,13 +4,47 @@ An app to find cool events at the hottest venues in New York City.
 
 ## Frontend
 
-The app's frontend is created using React, which makes axios calls to access the data from the backend. The app is set up with a simple flow of pages as shown below:
+The app's frontend is created using React and is set up with a simple flow of pages as shown below:
 
 ![CHD](./readme-files/CHD.png)
 
-All the venues are displayed on the landing page and clicking on a venue card will lead to the venue's page. This page in turn displays data about the venue as well as upcoming events at that venue. Additional events at that venue can be added on this page.
+In order to retrieve from and post to the backend server, the app uses axios calls to the backend.
 
-Finally, click on an event card will lead to the event page, which displays details about that event.
+```js
+useEffect(() => {
+        const getEvent = async() => {
+            const response = await axios.get(`http://localhost:8000/events/${id}`)
+            setEvent(response.data)
+        }
+        getEvent()
+    }, [])
+
+    useEffect(() => {
+        const getVenue = async() => {
+            const response = await axios.get(event.venue)
+            setVenue(response.data)
+        }
+        if (event) {
+            getVenue()
+        }
+    }, [event])
+```
+
+All the venues are displayed on the landing page and clicking on a venue card will lead to the venue's page.
+
+![venues](./readme-files/Venues.png)
+
+This page in turn displays data about the venue as well as upcoming events at that venue.
+
+![details](./readme-files/Venue.png)
+
+Additional events at that venue can be added on this page.
+
+![create](./readme-files/Create.png)
+
+Finally, clicking on an event card will lead to the event page, which displays details about that event.
+
+![event](./readme-files/Event.png)
 
 ## Backend
 
