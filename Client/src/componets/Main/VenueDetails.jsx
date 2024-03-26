@@ -25,6 +25,8 @@ export default function VenueDetails(){
         return <h1>Loading...</h1>
     } else {
         return (
+            
+           
             <div>
                 <h1>{venue.name}</h1>
                 <img alt={venue.name} src={venue.image_url} />
@@ -47,9 +49,11 @@ export default function VenueDetails(){
                             <h5>${event.ga_price}</h5>
                         </div>
                     ))}
-                    <CreateEvents/>
+                   
+              <CreateEvents/>
             </div>
-
+           
+             
         )
     }
 }
