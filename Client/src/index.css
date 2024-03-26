@@ -1,69 +1,261 @@
-/* let's deleted this file------------------ */
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.venues-wrapper {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+}
+.venue-card {
+  width: calc(50% - 10px); /* Set width for each card (adjust as needed) */
+  margin-bottom: 10px; /* Add space between rows of cards */
+}
+.venue-card > img {
+  width: 90%; 
+  height: 10rem; 
+  object-fit: cover; 
+  border-radius: 10px;
+  border: 3px solid white;
+  box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.5);
+}
+.venue-card > h3{
+  margin-top: 1px;
+ color: #0E7FA3;
+ font-size: 1rem;
+ font-weight: bolder;
+}
+.main{
+  margin-top: 5%;
+ 
+}
+.venue-details-wrapper > img {
+  border-radius: 10px;
+   width: 90%;
+  height: 13rem;
+ margin: 5%;
+ border: 3px solid white;
+ box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.5);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.venue-name-address> h2{
+ margin-top: 0;
+ margin-bottom: 0;
+  color: #0E7FA3;
+  font-size: 1.5rem;
 }
 
-body {
-  margin: 0;
+.venue-details{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+}
+.venue-details-wrapper{
+  display: flex;
+  flex-direction: column;
+
+}
+ dt{
+  color: #0E7FA3;
+  font-size: large;
+}
+dd{
+  color: #182256;
+  margin-left: 0;
+}
+.venue-row{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.venue-name-address> h5{
+  margin-top: 0;
+  color: #182256;
+  font-size: .8rem;
+}
+.venue-contact-heading > h2{
+  color: #0E7FA3;
+}
+.venue-contact-name, .venue-contact-email{
+  color:  #182256;
+  
+}
+.venue-contact-details{
+  display: flex;
+  flex-direction:row ;
+  justify-content: space-around;
+}
+.venue-details{
+  margin-bottom: 5%;
+
+
+}
+.venue-details::after {
+  content: "";
+  display: block;
+  margin-top: 30px; /* Adjust the margin-top as needed */
+  border-top: 2px solid rgb(218, 216, 216); /* Add a horizontal line after .venue-details */
+  box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+  width: 90%;
+  justify-content: space-around;
+  margin-left: 5%;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.event-cards-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.event-card > img{
+  width: 80%;
+  height: 12rem;
+  border-radius: 10px;
+  border-top: 2px solid rgb(218, 216, 216); /* Add a horizontal line after .venue-details */
+  box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+}
+.event-wrapper >img{
+  width: 95%;
+  height: 15rem;
+  border-radius: 10px;
+  border-top: 2px solid rgb(218, 216, 216); /* Add a horizontal line after .venue-details */
+  box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+}
+.event-wrapper::after {
+  content: "";
+  display: block;
+  margin-top: 20%;
+  border-top: 2px solid rgb(218, 216, 216); 
+  box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+  width: 90%;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-bottom: 20%;
+
+}
+.event-heading > h2{
+  color: #0E7FA3;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+.event-heading > h5 ,dd{
+  color: #182256;
+  margin-top: 0;
+  font-size: large;
+  margin-bottom: 0;
+}
+.event-card-name-location > h3 ,.event-date >div{
+  color: #0E7FA3;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+ 
+ 
+  
+}
+.no-underline {
+  text-decoration: none;
+ color:  #182256;
+ font-weight: bold;
+ font-size: 1.5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.event-card-price{
+  display:flex ;
+  flex-direction: row;
+  justify-content: space-around;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.event-card-name-location > h5 {
+  color: #182256;
+  margin-top: 0;
+
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+.event-card-price > h3{
+  color: #182256;
+  margin-top: 0;
+  margin-bottom: 0;
+
+
+
+}
+.event-card-price > h5{
+  color: #182256;
+  font-size: large;
+  margin-top: 0;
+ 
+}
+.event-details{
+  display: flex;
+  flex-direction: column;
+}
+.event-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.FormContainer {
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(239, 242, 245);
+}
+.form{
+margin: 5%;
+padding: 5%
+}
+input {
+  width: 90%;
+  border-radius: 5px;
+  height: 20px;
+  margin-bottom: 10px;
+  font-size: small;
+  font-weight: bold;
+  color: #182256d8;
+  background-color: white;
+  border: 2px solid#182256;;
+}
+input::placeholder {
+  color: #182256c2; /* Change the placeholder color to gray (#999) */
+}
+label {
+margin-left: 10px;
+  color: #182256;
+  
+}
+#date{
+width: 60%;
+margin-left: 2%;
+
+}
+#door_time ,#start_time{
+  width: 30%;
+}
+.prices{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#ga_price ,#vip_price{
+  width: 30%;
+  margin: 5%;
+}
+.btn{
+  background-color: white;
+  border: 2px solid #0E7FA3;
+ border-radius: 7px;
+ color:#0E7FA3;
+ font-weight: bold;
+ width: 6rem;
+ height: 1.5rem;
+ box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+}
+.create-event-button > button{
+  background-color: white;
+  border: 2px solid #0E7FA3;
+ border-radius: 7px;
+ color:#0E7FA3;
+ font-weight: bold;
+ width: 6rem;
+ height: 1.5rem;
+ box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+}

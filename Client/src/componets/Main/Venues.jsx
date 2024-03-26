@@ -26,8 +26,6 @@ export default function Venues(){
     } else {
         return (
 
-    
-
             <div className='venues-wrapper'>
                 {venues.map(venue => (
                     <div className='venue-card' key={venue.id} onClick={() => showVenue(venue.id)} >

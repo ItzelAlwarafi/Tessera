@@ -3,9 +3,7 @@ body {
   text-align: center;
   display: block;
 }
-img {
-  max-width: 300px;
-}
+
 /* Header Styling below ------------- */
 header {
   padding: 40px 0 0;
@@ -15,6 +13,7 @@ header {
   top: 0;
   box-shadow: 1px 1px #eee;
 }
+
 header::before {
   content: '.';
   color: #182256;

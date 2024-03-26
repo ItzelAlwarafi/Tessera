@@ -33,14 +33,11 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
         return (
 
             
-         
-            
-             
             <div className='venue-details-wrapper'>
                 <div className='create-event-button'>
                     <button onClick={scrollToCreate} >Add event</button>
                 </div>
-
+                
                 <img alt={venue.name} src={venue.image_url} />
                 <div className='venue-details'>
                     <div className='venue-row'>
@@ -50,12 +47,12 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
                         </div>
                         <div className='venue-capacity'>
                             <dl>
-                                <dt>Max capacity</dt>
+                                <dt className='max-cap'>Max capacity</dt>
                                 <dd>{formatNumber(venue.capacity)}</dd>
                             </dl>
                         </div>
                     </div>
-                    <div className='venue-row'>
+                    <div className='venue-row-contact'>
                         <div className='venue-contact-heading'>
                             <h2>Contact</h2>
                         </div>
@@ -65,6 +62,9 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
                         </div>
                     </div>
                 </div>
+
+
+
                 <div className='event-cards-wrapper'>
                     { venue.events.map(event => (
                         <div className='event-card' key={event.id} onClick={() => showEvent(event.id)} >
@@ -72,7 +72,7 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
                             <div className='event-card-details'>
                                 <div className='event-card-name-location'>
                                     <h3>{event.name}</h3>
-                                    <h5>{event.address}</h5>
+                                   
                                 </div>
                                 <div className='event-card-price'>
                                     <h3>{formatDate(event.date)}</h3>
@@ -83,7 +83,7 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
                     ))}
 
                    
-              <CreateEvents/>
+
 
                 </div>
                 <div className='create-event-wrapper' id='create-event-form' >
