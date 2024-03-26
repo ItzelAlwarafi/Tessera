@@ -34,9 +34,12 @@ All the venues are displayed on the landing page and clicking on a venue card wi
 
 ![venues](./readme-files/Venues.png)
 
-This page in turn displays data about the venue as well as upcoming events at that venue. Additional events at that venue can be added on this page.
+This page in turn displays data about the venue as well as upcoming events at that venue.
 
 ![details](./readme-files/Venue.png)
+
+Additional events at that venue can be added on this page.
+
 ![create](./readme-files/Create.png)
 
 Finally, clicking on an event card will lead to the event page, which displays details about that event.
