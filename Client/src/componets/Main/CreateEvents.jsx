@@ -22,6 +22,7 @@ export default function CreateEvents() {
     setFormState({ ...formState, [id]: value })
   }
 
+
   const [formState, setFormState] = useState(formInitialState)
 
   const handleSubmit = async (event) => {
@@ -66,3 +67,4 @@ export default function CreateEvents() {
     </div>
   )
 }
+
