@@ -24,7 +24,7 @@
  font-weight: bolder;
 }
 .main{
-  margin-top: 5%;
+  margin-top: 40%;
  
 }
 .venue-details-wrapper > img {
@@ -152,7 +152,7 @@ dd{
 }
 .no-underline {
   text-decoration: none;
- color:  #182256;
+ color:  #0E7FA3;
  font-weight: bold;
  font-size: 1.5rem;
 }
