@@ -3,28 +3,13 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 
-export default function EventDetails(){
+export default function EventDetails({convertTime, capitaliseFirstLetter, formatPrice, formatDate}){
     
     const { id } = useParams()
     const [event, setEvent] = useState()
     const [venue, setVenue] = useState()
-    const [date, setDate] = useState()
 
-    const convertTime = (timeString) => {
-        const [hours, minutes, seconds] = timeString.split(':').map(Number)
-        const period = hours >= 12 ? 'pm': 'am'
-        const hours12 = hours % 12 || 12
-        const formattedTime = `${hours12}:${String(minutes).padStart(2, '0')} ${period}`
-        return formattedTime
-    }
-
-    const capitaliseFirstLetter = (word) => {
-        return word.charAt(0).toUpperCase() + word.slice(1)
-    }
-
-    const formatPrice = (price) => {
-        return price.toLocaleString('en-US', {style: 'currency', currency: 'USD'})
-    }
+    
 
     useEffect(() => {
         const getEvent = async() => {
@@ -39,16 +24,8 @@ export default function EventDetails(){
             const response = await axios.get(event.venue)
             setVenue(response.data)
         }
-        const dateOptions = {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        }
         if (event) {
             getVenue()
-            const formattedDate = new Date(event.date)
-            const localeDate = formattedDate.toLocaleDateString("en-US", dateOptions)
-            setDate(localeDate)
         }
     }, [event])
 
@@ -58,7 +35,7 @@ export default function EventDetails(){
         return (
             <div className='event-wrapper'>
                 <div className='event-heading'>
-                    <h3>{event.name}</h3>
+                    <h2>{event.name}</h2>
                     <h5>{capitaliseFirstLetter(event.venue_type)}</h5>
                 </div>
                 <img alt={event.name} src={event.image_url} />
@@ -71,7 +48,7 @@ export default function EventDetails(){
                             </dl>
                         </div>
                         <div className='event-date'>
-                            <div>{date}</div>
+                            <div>{formatDate(event.date)}</div>
                         </div>
                     </div>
                     <div className='event-row'>
