@@ -25,6 +25,7 @@ export default function Venues(){
         return <h1>Getting venues...</h1>
     } else {
         return (
+
             <div>
                 <h1>Venues</h1>
                
@@ -38,6 +39,15 @@ export default function Venues(){
                     ))}
                 </div>
                 
+
+            <div className='venues-wrapper'>
+                {venues.map(venue => (
+                    <div className='venue-card' key={venue.id} onClick={() => showVenue(venue.id)} >
+                        <img alt={venue.name} src={venue.image_url} />
+                        <h3>{venue.name}</h3>
+                    </div>
+                ))}
+
             </div>
         )
     }
