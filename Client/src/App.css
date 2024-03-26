@@ -3,15 +3,14 @@ body {
   text-align: center;
   display: block;
 }
-img {
-  max-width: 300px;
-}
+
 /* Header Styling below ------------- */
 header {
   padding: 40px 10px 10px;
   border: solid 1px #0e81a4;
   position: relative;
 }
+
 header::before {
   content: '.';
   color: #182256;

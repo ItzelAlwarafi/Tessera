@@ -40,10 +40,10 @@ export default function EventDetails({convertTime, capitaliseFirstLetter, format
                 </div>
                 <img alt={event.name} src={event.image_url} />
                 <div className='event-details'>
-                    <div className='event-row'>
+                    <div className='event-row-location'>
                         <div className='event-venue-location'>
                             <dl>
-                                <dt><Link to={`/venues/${venue.id}`} >{venue.name}</Link></dt>
+                                <dt><Link to={`/venues/${venue.id}`} className="no-underline">{venue.name}</Link></dt>
                                 <dd>{venue.address}</dd>
                             </dl>
                         </div>

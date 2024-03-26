@@ -36,7 +36,7 @@ export default function Main(){
     }
 
     return(
-        <div>
+        <div className='main'>
             <Routes>
                 <Route path='/' element={<Venues />} />
                 <Route path='/venues/:id' element={<VenueDetails formatDate={formatDate} formatNumber={formatNumber} formatPrice={formatPrice} />} />
