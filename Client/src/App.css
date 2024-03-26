@@ -8,9 +8,12 @@ img {
 }
 /* Header Styling below ------------- */
 header {
-  padding: 40px 10px 10px;
-  border: solid 1px #0e81a4;
-  position: relative;
+  padding: 40px 0 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  box-shadow: 1px 1px #eee;
 }
 header::before {
   content: '.';
@@ -26,34 +29,35 @@ header::before {
   display: flex;
   flex-direction: row;
 }
-.header-row-2 {
-  /* justify-content: space-between; */
-}
 .header-row-1 div, .header-row-1 h1, .header-row-2 div {
   place-self: center;
 }
 header h1 {
+  font-family: "Jockey One", sans-serif;
   width: 100%;
-  border: solid 1px red;
   margin: 0;
   color: #B642A4;
+  font-size: 2.75rem;
 }
 .menu-icon, .search-icon, .home-icon {
   color: #0e81a4;
   width: 30px;
   padding: 10px;
   font-size: 1.2rem;
+  font-size: 700;
+}
+.menu-icon:hover, .search-icon:hover, .home-icon:hover {
+  color: #B642A4;
 }
 .home-icon {
   font-size: 1.1rem;
-  border: solid 1px red;
 }
 .search-bar-holder {
   width: 40%;
   max-width: 250px;
   margin: 0 auto;
 }
-.search-bar-holder input[type='text'] {
+.search-bar {
   display: inline-block;
   border-radius: 7px;
   line-height: 1.2;
@@ -61,9 +65,12 @@ header h1 {
   text-indent: 2px;
   font-style: italic;
   width: 100%;
-  border: solid 1px #ccc;
-  border: solid 1px red;
+  border: solid 1px #555555;
 }
+.display-none {
+  display: none;
+}
+
 /* Header Styling below ------------- */
 /* Footer Styling below ------------- */
 footer {
@@ -125,6 +132,21 @@ footer p {
   /* Footer Styling above ------------- */
 }
 @media screen and (min-width:740px) {
+  /* Header Styling below ------------- */
+  .header-row-1, .header-row-2 {
+    max-width:800px;
+    margin: 0 auto;
+  }
+  .display-none {
+    display: inline-block;
+  }
+  .home-icon {
+    font-size: 1.75rem;
+  }
+  .menu-icon, .search-icon {
+    display: none;
+  }
+  /* Header Styling above ------------- */
   /* Footer Styling below ------------- */  
   .footer-links {
     flex-direction: row;

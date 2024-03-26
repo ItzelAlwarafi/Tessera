@@ -3,6 +3,7 @@ import { faHouse, faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-
 import { Link } from 'react-router-dom'
 
 export default function Header(){
+
     return(
         <>
         <header>
@@ -12,16 +13,17 @@ export default function Header(){
                 </div>
                 <h1>Tessera</h1>
                 <div>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon'/>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon' onClick={()=> {
+                        document.querySelector('.search-bar').classList.toggle('display-none')
+                    }}/>
                 </div>  
             </div>
-
             <div className='header-row-2'>
                 <div>
                     <Link to="/"><FontAwesomeIcon icon={faHouse} className='home-icon' /></Link>
                 </div>
                 <div className='search-bar-holder'>
-                    <input type='text' placeholder='Search'/>
+                    <input type='text' placeholder='Search' className='search-bar display-none'/>
                 </div>
                 <div></div>
             </div>
