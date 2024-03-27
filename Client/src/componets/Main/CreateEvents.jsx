@@ -50,21 +50,23 @@ export default function CreateEvents() {
 
   return (
     <div className="FormContainer">
+      <h3>Add Event</h3>
       <form onSubmit={handleSubmit}>
         <div className="form">
-        <input type="text" id="name" placeholder="Event Name" value={formState.name} onChange={handleChange}></input>
-        <input type="text" id="venue_type" placeholder="Venue Type" value={formState.venue_type} onChange={handleChange}></input>
-        <label> Date of Event: </label>
-        <input type="date" id="date" value={formState.date} onChange={handleChange}></input>
-        <label> At hat time will doors open ? : </label>
-        <input type="time" id="door_time" value={formState.door_time} onChange={handleChange}></input>
-        <label> Time will the show start ? : </label>
-        <input type="time" id="start_time" value={formState.start_time} onChange={handleChange}></input>
-        <div className="prices">
-        <input type="number" id="ga_price" min="0" placeholder="GA Price" value={formState.ga_price} onChange={handleChange}></input>
-        <input type="number" id="vip_price" min="0" placeholder="VIP Price" value={formState.vip_price} onChange={handleChange}></input>
-        </div>
-        <input type="text" id="image_url" placeholder="Image" value={formState.image_url} onChange={handleChange}></input>
+          <input type="text" id="name" placeholder="Event Name" value={formState.name} onChange={handleChange}></input>
+          <input type="text" id="venue_type" placeholder="Venue Type" value={formState.venue_type} onChange={handleChange}></input>
+          <label>Date of event:</label>
+          <input type="date" id="date" value={formState.date} onChange={handleChange}></input>
+          <label>Doors open time:</label>
+          <input type="time" id="door_time" value={formState.door_time} onChange={handleChange}></input>
+          <label>Show start time:</label>
+          <input type="time" id="start_time" value={formState.start_time} onChange={handleChange}></input>
+          <label>Ticket prices:</label>
+          <div className="prices">
+            <input type="number" id="ga_price" min="0" placeholder="GA Price" value={formState.ga_price} onChange={handleChange}></input>
+            <input type="number" id="vip_price" min="0" placeholder="VIP Price" value={formState.vip_price} onChange={handleChange}></input>
+          </div>
+          <input type="text" id="image_url" placeholder="Image" value={formState.image_url} onChange={handleChange}></input>
         </div>
         <button id="createEventbtn" className="btn" type="submit">
           Submit
