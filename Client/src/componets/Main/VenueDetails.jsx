@@ -37,13 +37,15 @@ export default function VenueDetails({formatDate, formatNumber, formatPrice}){
                 <div className='create-event-button'>
                     <button onClick={scrollToCreate} >Add event</button>
                 </div>
-                
-                <img alt={venue.name} src={venue.image_url} />
+                {/* <img alt={venue.name} src={venue.image_url} /> */}
                 <div className='venue-details'>
                     <div className='venue-row'>
-                        <div className='venue-name-address'>
-                            <h2>{venue.name}</h2>
-                            <h5>{venue.address}</h5>
+                        <div className='venue-name-img'>
+                            <img alt={venue.name} src={venue.image_url} />
+                            <div className='venue-name-address'>
+                                <h2>{venue.name}</h2>
+                                <h5>{venue.address}</h5>
+                            </div>
                         </div>
                         <div className='venue-capacity'>
                             <dl>
