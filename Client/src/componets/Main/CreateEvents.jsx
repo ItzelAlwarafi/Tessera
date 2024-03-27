@@ -54,7 +54,7 @@ export default function CreateEvents() {
       <form onSubmit={handleSubmit}>
         <div className="form">
           <input type="text" id="name" placeholder="Event Name" value={formState.name} onChange={handleChange}></input>
-          <input type="text" id="venue_type" placeholder="Venue Type" value={formState.venue_type} onChange={handleChange}></input>
+          <input type="text" id="venue_type" placeholder="Event Type" value={formState.venue_type} onChange={handleChange}></input>
           <label>Date of event:</label>
           <input type="date" id="date" value={formState.date} onChange={handleChange}></input>
           <label>Doors open time:</label>

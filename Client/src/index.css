@@ -21,9 +21,9 @@ body {
 }
 .venue-card > h3{
   margin-top: 1px;
- color: #0E7FA3;
- font-size: 1rem;
- font-weight: bolder;
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 .main{
   margin-top: 40%;
@@ -41,7 +41,7 @@ body {
 .venue-name-address> h2{
  margin-top: 0;
  margin-bottom: 0;
-  color: #0E7FA3;
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -68,8 +68,8 @@ dd{
   justify-content: space-around;
 }
 .venue-name-address> h5{
-  margin-top: 0;
-  color: #182256;
+  margin-top: 2px;
+  color: rgb(215, 215, 215);
   font-size: .8rem;
 }
 .venue-contact-heading > h2{
@@ -110,7 +110,7 @@ dd{
   height: 12rem;
   border-radius: 10px;
   border-top: 2px solid rgb(218, 216, 216); /* Add a horizontal line after .venue-details */
-  box-shadow: 0px 4px 10px rgba(4, 4, 4, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .event-wrapper >img{
   width: 95%;
@@ -134,23 +134,24 @@ dd{
 .event-heading > h2{
   color: #0E7FA3;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-size: 2rem;
 }
-.event-heading > h5 ,dd{
+.event-heading > h5{
   color: #182256;
   margin-top: 0;
   font-size: large;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
+
+
 .event-card-name-location > h3 ,.event-date >div{
   color: #0E7FA3;
   margin-top: 0;
-  margin-bottom: 0;
+  padding-bottom: 10px;
   font-size: 1.1rem;
- 
- 
-  
+  width: 70%;
+  margin: 0 auto;
 }
 .no-underline {
   text-decoration: none;
@@ -160,6 +161,8 @@ dd{
 }
 
 .event-card-price{
+  width: 80%;
+  margin: 0 auto;
   display:flex ;
   flex-direction: row;
   justify-content: space-around;
@@ -172,6 +175,7 @@ dd{
 
 .event-card-price > h3{
   color: #182256;
+  font-size: 1em;
   margin-top: 0;
   margin-bottom: 0;
 
@@ -180,7 +184,7 @@ dd{
 }
 .event-card-price > h5{
   color: #182256;
-  font-size: large;
+  font-size: 1em;
   margin-top: 0;
  
 }
@@ -192,6 +196,13 @@ dd{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.event-row dd{
+  font-weight: 700;
+}
+
+.event-doors, .event-ga, .event-start, .event-vip {
+  text-align: left;
 }
 
 .FormContainer {
@@ -267,7 +278,7 @@ dd{
       font-weight: bold;
       width: 6rem;
       height: 1.5rem;
-      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
     .create-event-button > button{
       background-color: white;
