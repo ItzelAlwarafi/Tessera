@@ -147,15 +147,17 @@ dd{
 
 .event-card-name-location > h3 ,.event-date >div{
   color: #0E7FA3;
+  color: #fff;
   margin-top: 0;
   padding-bottom: 10px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   width: 70%;
   margin: 0 auto;
 }
 .no-underline {
   text-decoration: none;
  color:  #0E7FA3;
+ color: #fff;
  font-weight: bold;
  font-size: 1.5rem;
 }
@@ -165,7 +167,7 @@ dd{
   margin: 0 auto;
   display:flex ;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .event-card-name-location > h5 {
   color: #182256;
@@ -174,19 +176,18 @@ dd{
 }
 
 .event-card-price > h3{
-  color: #182256;
-  font-size: 1em;
+  color: #fff;
+  font-size: .8em;
   margin-top: 0;
   margin-bottom: 0;
-
-
-
+  color: rgb(215, 215, 215);
+  
 }
 .event-card-price > h5{
-  color: #182256;
-  font-size: 1em;
+  color: #fff;
+  font-size: .8em;
   margin-top: 0;
- 
+  color: rgb(215, 215, 215);
 }
 .event-details{
   display: flex;
@@ -196,6 +197,19 @@ dd{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.event-venue-location dt, .event-venue-location dd {
+  text-align: left;
+  padding-left: 10px;
+}
+.event-venue-location dd {
+  color: #fff;
+  font-size: .8rem;
+  color: rgb(215, 215, 215);
+}
+.event-date div {
+  font-size: 1.5rem;
+  color: #fff
 }
 .event-row dd{
   font-weight: 700;
