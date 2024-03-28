@@ -138,6 +138,63 @@ header h1 {
   opacity: .7;
 }
 /* Venue Details Styling above ------ */
+/* Event List Styling below --------- */
+.event-card {
+  position: relative;
+  margin-top: 10px;
+}
+/* .event-card > div { */
+.event-card .event-card-details {
+  position: absolute;
+  bottom: 13px;
+  width: 80%;
+  left: 10%;
+  z-index: 8;
+  padding-top: 10px;
+}
+/* .event-card > div::before { */
+.event-card .event-card-details::after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #313030;
+  opacity: .7;
+  z-index: -1;
+}
+.event-card .event-card-price {
+  display: flex;
+  direction: column;
+}
+/* Event List Styling above --------- */
+/* Event Details Styling below ------ */
+.event-wrapper {
+  position: relative;
+
+}
+.event-row-location {
+  position: absolute;
+  width: 94.75%;
+  left: 2.5%;
+  top: 37%;
+  z-index: 5;
+  padding: 0 0 10px;
+}
+.event-row-location::after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #313030;
+  z-index: -1;
+  opacity: .7;
+}
+
+/* Event Details Styling above ------ */
 /* Footer Styling below ------------- */
 footer {
   background-color: #182256;
