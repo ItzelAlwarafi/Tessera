@@ -24,6 +24,7 @@ export default function CreateEvents() {
 
 
   const [formState, setFormState] = useState(formInitialState)
+  const [message, setMessage] = useState('')
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -43,9 +44,15 @@ export default function CreateEvents() {
 
       const response = await axios.post("http://localhost:8000/events/", formDataJson)
       console.log("form submitted", response.data)
+
+                 setFormState(formInitialState)
+                // Display message
+                setMessage("Event added successfully!")
+
     } catch (error) {
       console.log("Error posting data ", error)
     }
+
   }
 
   return (
@@ -72,6 +79,7 @@ export default function CreateEvents() {
           Submit
         </button>
       </form>
+      {message && <p className="event-created-message">{message}</p>}
     </div>
   )
 }

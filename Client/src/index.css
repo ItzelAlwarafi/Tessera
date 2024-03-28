@@ -58,6 +58,13 @@ body {
   color: #0E7FA3;
   font-size: large;
 }
+
+.event-created-message{
+  color: #0E7FA3;
+  font-size: large;
+  font-weight: bold;
+ 
+}
 dd{
   color: #182256;
   margin-left: 0;
